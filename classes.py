@@ -20,7 +20,7 @@ class Grid:
                 self.grid_array[x][y] = random.randint(0,1)
 
 
-    def Conway(self, off_color, on_color, surface, pause):
+    def conway(self, off_color, on_color, surface, pause):
         for x in range(self.rows):
             for y in range(self.columns):
                 y_pos = y * self.scale
@@ -44,7 +44,7 @@ class Grid:
                         next_el[x][y] = state
             self.grid_array = next_el
 
-    def HandleMouse(self, x, y):
+    def handle_mouse(self, x, y):
         _x = x//self.scale
         _y = y//self.scale
         try:
