@@ -36,11 +36,11 @@ while run:
             if event.key == pygame.K_SPACE:
                 pause = not pause
 
-    Grid.Conway(off_color=white, on_color=blue, surface=screen, pause=pause)
+    Grid.conway(off_color=white, on_color=blue, surface=screen, pause=pause)
 
     if pygame.mouse.get_pressed()[0]:
         mouseX, mouseY = pygame.mouse.get_pos()
-        Grid.HandleMouse(mouseX, mouseY)
+        Grid.handle_mouse(mouseX, mouseY)
 
 
     pygame.display.update()
